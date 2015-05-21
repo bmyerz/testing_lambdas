@@ -1,0 +1,12 @@
+
+
+for e in 0 1 2 3; do
+	for n in loop_hoisting loop_hoisting_functor; do
+		g++ -O$e -std=c++11 $n.cpp -o $n_O$e.exe
+	done
+done
+
+
+for e in O0 O1 O2 O3; do for i in 1 2 3; do echo $e; time ./loop_hoisting_$e.exe ; done; done
+
+for e in O0 O1 O2 O3; do for i in 1 2 3; do echo f$e; time ./loop_hoisting_functor_$e.exe ; done; done
