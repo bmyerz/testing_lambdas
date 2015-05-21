@@ -1,4 +1,5 @@
 
+gcc -v 2> compiler.log
 
 for e in 0 1 2 3; do
 	for n in loop_hoisting loop_hoisting_functor; do
